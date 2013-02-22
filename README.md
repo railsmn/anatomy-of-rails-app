@@ -28,12 +28,12 @@ A good resource for installing a Rails environment on your own can be found [her
 ### Copy the GitHub repo to your machine
 Open a terminal window and use 'cd' to change to a directory you want to work in.
 
-  mkdir railsmn
-  cd railsmn
+	mkdir railsmn
+	cd railsmn
 
 In that directory, pull down your own copy of this repository 
 
-  git clone https://github.com/railsmn/anatomy-of-rails-app.git
-  cd anatomy-of-rails-app
+	git clone https://github.com/railsmn/anatomy-of-rails-app.git
+	cd anatomy-of-rails-app
 
-  
+	
