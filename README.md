@@ -36,4 +36,40 @@ In that directory, pull down your own copy of this repository
 	git clone https://github.com/railsmn/anatomy-of-rails-app.git
 	cd anatomy-of-rails-app
 
+You should now be able to look at your new Rails application by running:
+	
+	bundle install
+	rake db:migrate
+	rake db:seed
+	rails s
+
+
+## Overview
+We'll go over the critical pieces of any Ruby on Rails application, namely:
+* Gemfile - concepts behind Gems, Bundler and RubyGems
+* Views - where the HTML and CSS resources are kept
+* Models - code representation of data, possibly backed by a database, used within your view (users, blog posts, product information, etc. 
+* Controllers - the link between your views and your models, acts on input from the website user and shepards data from the model back to the user via the views
+* Assets - where your CSS and JavaScript are stored and handled by the 'asset pipeline'. Responsible for styling and user interactivity of your web pages.
+* Config - where various configuration settings reside for Ruby on Rails
+
+	Put some recommended links about each above
+
+### Steps to 'invite' a user to the invite-only app
+
+1. send an invitation from form while not logged in
+2. log in as admin from seed data
+3. send invitation
+4. tinker around within rails console to get confirmation token (talk about devise a little bit)
+5. access confirmation url
+
+## Add a feature
+### Deleting a user
+(rough steps, fill in)
+
+1. Git branch
+2. Create tests
+3. Implement
+
+## Conclusion	
 	
