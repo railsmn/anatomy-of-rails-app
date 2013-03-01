@@ -53,7 +53,7 @@ We'll go over the critical pieces of any Ruby on Rails application, namely:
 * Assets - where your CSS and JavaScript are stored and handled by the 'asset pipeline'. Responsible for styling and user interactivity of your web pages.
 * Config - where various configuration settings reside for Ruby on Rails
 
-	TODO: Put some recommended links about each above
+For a review and more detailed information about each of these parts after tonights session, you may visit [the official Rails getting started page](http://guides.rubyonrails.org/getting_started.html)
 
 ### Steps to 'invite' a user to the invite-only app
 
@@ -84,12 +84,21 @@ We'll go over the critical pieces of any Ruby on Rails application, namely:
 
 
 ## Add a feature
-### Deleting a user
-(rough steps, fill in)
+### Disabling users
+The high level 'best practice' for adding a feature to a Rails apps is as follows:
 
-1. Git branch
-2. Create tests
-3. Implement
+1. Create a new Git 'branch' for your feature
+2. Create tests that detail the implementation of that feature (we'll skip this for this session and talk about testing in later meetups, but it is very important!)
+3. Implement until those tests pass
+4. Merge your Git branch 
+5. Deploy
+
+On the admin page if we look at our table of users, we notice that there is no way for an administrator to disallow users access to our 
+
+1. A link on the admin page
+2. A controller method to accept the link request 
+3. Update our user model to manage being disabled
+4. Check the status of disabled users when they try to log in
 
 ## Conclusion	
 	
