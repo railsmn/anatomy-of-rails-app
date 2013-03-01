@@ -53,15 +53,35 @@ We'll go over the critical pieces of any Ruby on Rails application, namely:
 * Assets - where your CSS and JavaScript are stored and handled by the 'asset pipeline'. Responsible for styling and user interactivity of your web pages.
 * Config - where various configuration settings reside for Ruby on Rails
 
-	Put some recommended links about each above
+	TODO: Put some recommended links about each above
 
 ### Steps to 'invite' a user to the invite-only app
 
-1. send an invitation from form while not logged in
-2. log in as admin from seed data
-3. send invitation
-4. tinker around within rails console to get confirmation token (talk about devise a little bit)
-5. access confirmation url
+* Access your [app](http://localhost:3000) and click the 'Request Invite' button and fill out your email
+* Go to the [sign-in page](http://localhost:3000/users/sign_in) and fill out the default admin data that you loaded with 'rake db:seed': user@example.com/changeme
+* Access the 'admin' page and click the send invitation link next to your email
+* Since we don't have the ability to send e-mails right now in our development environment, we need to 'fake it' and create the URL ourselves with the Rails console
+	
+		rails console
+		User.last.confirmation_token #copy the characters without the quotations
+		exit
+
+	Now we need to find out where to put this token so we can create the same link that the e-mail would create. In your terminal run:
+
+		rake routes
+
+	This will generate a list of all of the URLs your app can respond to. The key one we are looking for is:
+
+		GET    /users/confirmation(.:format)          confirmations#show
+
+	This corresponds to the url http://localhost:3000/users/confirmation where we can now add our token as follows:
+
+		http://localhost:3000/users/confirmation?confirmation_token=your_token_here
+
+	Access the above URL and enter in a password for the e-mail you registered with
+
+* You are now logged in to what is soon to be your invite-only app!
+
 
 ## Add a feature
 ### Deleting a user
