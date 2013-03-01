@@ -93,12 +93,18 @@ The high level 'best practice' for adding a feature to a Rails apps is as follow
 4. Merge your Git branch 
 5. Deploy
 
-On the admin page if we look at our table of users, we notice that there is no way for an administrator to disallow users access to our 
+On the admin page if we look at our table of users, we notice that there is no way for an administrator to disallow users access to our app
 
 1. A link on the admin page
 2. A controller method to accept the link request 
 3. Update our user model to manage being disabled
-4. Check the status of disabled users when they try to log in
+4. Check the status of disabled users when they log in
+
+To see the changes that were made, check out the [commit history on GitHub](https://github.com/railsmn/anatomy-of-rails-app/commits/develop) showing the final state of this application
 
 ## Conclusion	
+
+A lot was covered today and it was presented with the intention of giving you a whirlwind tour of how Rails works and then showing how to create a real feature. From here we encourage you to hack on your own apps and leverage us as a resource as you learn Rails.
+
+Until next time!
 	
