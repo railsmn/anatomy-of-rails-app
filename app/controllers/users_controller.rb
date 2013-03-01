@@ -26,9 +26,24 @@ class UsersController < ApplicationController
     end
     redirect_to :back, :only_path => true, :notice => "Sent invitation to #{users.count} users."
   end
-  
+
+  def enable
+    @user = User.find(params[:id])
+    @user.enabled = true
+    @user.save!
+    redirect_to :back, :only_path => true, :notice => "Enabled user account for #{@user.email}"
+
+  end
+
+  def disable
+    @user = User.find(params[:id])
+    @user.enabled = false
+    @user.save!
+    redirect_to :back, :only_path => true, :notice => "Disabled user account for #{@user.email}"
+  end  
+
   private
-  
+
   def create_chart
     users_by_day = User.group("DATE(created_at)").count
     data_table = GoogleVisualr::DataTable.new

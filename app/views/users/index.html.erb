@@ -39,8 +39,8 @@
         <td><%= user.sign_in_count if user.sign_in_count %></td>
         <td><%= user.last_sign_in_at.to_date if user.last_sign_in_at %></td>
         <td><%= if user.enabled? then
-          link_to "Disable", disable_user_path else
-          link_to "Enable", enable_user_path
+          link_to "Disable", disable_user_path(user) else
+          link_to "Enable", enable_user_path(user) 
           end %>
         </td>
       </tr>

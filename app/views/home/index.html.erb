@@ -1,1 +1,5 @@
-<h3>Home</h3>
+<%= if current_user.enabled? then 
+	"Your account is enabled"
+else 
+	"Your account is disabled" 
+end %>
